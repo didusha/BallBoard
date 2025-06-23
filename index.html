@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Mister Balls</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onkeyup="onKey(event)" onload="onInitGame()">
+    <h1>Collect those Balls</h1>
+    <div>Balls collected: <span class="Balls-collected"> 0 </span></div>
+    <div> Neighbors balls:<span class="ngCount"> 0 </span></div>
+    <table>
+        <tbody class="board"></tbody>
+    </table>
+    <div class="victory hide"> You Won! All balls collected
+        <button class="btn" onclick="restartGame()"> Restart </button>
+    </div>
+    <script src="js/util.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
