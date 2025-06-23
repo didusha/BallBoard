@@ -1,0 +1,42 @@
+body {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+}
+
+table{
+    margin: auto; 
+    margin-top: 10px;
+}
+
+.cell {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+
+.cell img {
+    width: 25px;
+    height: auto;
+}
+
+.floor {
+    background-color: gray;
+}
+
+.wall {
+    background-color: brown;
+}
+
+.hide{
+    display: none;
+}
+
+.btn{
+  padding: 5px;
+  cursor: pointer;  
+}
+
+.victory{
+    margin-top: 10px;
+}

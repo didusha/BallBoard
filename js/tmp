@@ -1,0 +1,22 @@
+function findEmptyCells() {
+    //create pos array contains empty board spaces and not wall - pos{i, j}
+    var emptyCells = []
+    for (var i = 0; i < gBoard.length; i++) {
+        for (var j = 0; j < gBoard[i].length; j++) {
+            var currCell = gBoard[i][j]
+            if (currCell.gameElement === null && currCell.type !== WALL)
+                emptyCells.push({ i: i, j: j })
+        }
+    }
+    return emptyCells
+}
+
+function addGlue() {
+    var emptyCells = findEmptyCells()
+    var idx = getRandomIntInclusive(0, emptyCells.length)
+    var pos = emptyCells[idx]
+    //update modal
+    gBoard[pos.i][pos.j].gameElement = GLUE
+    //update DOM
+    renderCell(pos, GLUE_IMG)
+}
